@@ -1,12 +1,39 @@
+### General
+
+.vagrant
+
+### Server
+.springBeans
+server/**/target/
+*.classpath
+*.project
+*.settings/
+*.db
+*.log
+*~
+*.zip
 *.class
+*.idea
+*.iml
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+### Client
+target
+build
+.gradle
+.sass-cache
+*.sublime-project
+*.sublime-workspace
+client/**/target/
+server/**/solr/data
+server/**/bin/
+.DS_Store
+bin-debug
+bin-release
+html-template
+.externalToolBuilders
 
-# Package Files #
-*.jar
-*.war
-*.ear
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+### Scripts
+packer_cache/
+output-vagrant/
+scripts/packer/*.pem
+*.box
