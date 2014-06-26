@@ -1,6 +1,7 @@
 package test.builder;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import javax.annotation.Resource;
@@ -38,6 +39,7 @@ public abstract class AbstractWebTest extends AbstractTest {
 		super.setUp();
 		this.mockMvc = MockMvcBuilders.webAppContextSetup(this.wac)
 				.addFilter(springSecurityFilterChain)
+				.alwaysDo(print())
 				.build();
 	}
 
